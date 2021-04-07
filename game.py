@@ -115,7 +115,8 @@ def gui_interface(reels:List[reel],results,threads:List[threading.Thread],fx):
                 
                     
                     for i in range(len(reels)):
-                        if 19 - int((len(reels)*5)/2) > 0:
+                        # print(i+1,end='')
+                        if 19 - int((len(reels)*5)/2)> 0:
                             for k in range(19  - int((len(reels)*5)/2)):
                                 print(' ',end='')
                         for j in range(len(reels)):
