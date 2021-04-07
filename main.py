@@ -1,12 +1,11 @@
-import os
 import threading
 import msvcrt
 from wheel import reel
 from game import *
 # parameters............................................
-# cost = 1
+
 mode = 'game'
-number_of_reels = 5
+number_of_reels = 4
 number_of_symbols = 4
 f_payout = lambda x: ((1/x) * number_of_reels*number_of_symbols)
 number_of_runs = 10000
