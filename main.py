@@ -5,7 +5,7 @@ from game import *
 # parameters............................................
 
 mode = 'game'
-number_of_reels = 4
+number_of_reels = 3
 number_of_symbols = 4
 f_payout = lambda x: ((1/x) * number_of_reels*number_of_symbols)
 number_of_runs = 10000
