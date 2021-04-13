@@ -1,4 +1,5 @@
 import threading
+from matplotlib.pyplot import step
 
 from numpy.core.numeric import Inf
 from wheel import reel
@@ -185,7 +186,17 @@ def simulation(number_of_runs,reels:List[reel],results,threads:List[threading.Th
             
     # print('total price: '+str(__price))
     import matplotlib.pyplot as plt
-    plt.figure()
-    plt.hist(price_list,bins = 8)
+    # plt.figure()
+    # price_list = np.array(price_list)
+    # y,x = np.histogram(price_list,bins = [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200])
+    # y = y.tolist()
+    # for i in range(len(y)):
+    #     y[i] = y[i]/number_of_runs    
+    # print(y)
+    # print(x)
+    # print(max(price_list))
+    # # plt.bar(price_list,bins = 8)
     
+    # plt.bar(x[0:-1],y,width=10)
+    # plt.plot(x[0:-1],y,color = 'orange')
     return __price

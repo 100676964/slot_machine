@@ -3,8 +3,7 @@ import msvcrt
 from wheel import reel
 from game import *
 # parameters............................................
-
-mode = 'game'
+mode = 'sim'
 number_of_reels = 3
 number_of_symbols = 4
 f_payout = lambda x: ((1/x) * number_of_reels*number_of_symbols)
@@ -69,18 +68,18 @@ if stops >= number_of_reels and len(reels) > 1:
         temp = reels.copy() 
         for i in range(number_of_simulations):
             # os.system('cls')
-            # update_play_lines(1)
+            update_play_lines(1)
             reels = temp.copy()
             reset()
             
-            total_price_list.append(simulation(number_of_runs,reels,results,threads,f_payout))
+            total_price_list.append(simulation(number_of_runs,reels,results,threads,f_payout)/10000)
             
             reels.clear()
         print(total_price_list)
         import matplotlib.pyplot as plt
-        # plt.show() 
-        # plt.figure()
-        # plt.plot([4,5,6,7,8,9],[21773,14532,10090,7601,6044,4574])
+        plt.show() 
+        plt.figure()
+        plt.plot([3,4,5,6,7,8],[0.3732,1.0922666666666683,2.223833333333341,3.7514,5.8669333333333915,8.339200000000037])
         plt.show()
            
 else:
